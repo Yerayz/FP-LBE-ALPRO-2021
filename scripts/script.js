@@ -12,10 +12,33 @@ const expbtn = document.getElementById('navexp')
 const edubtn = document.getElementById('navedu')
 const contactbtn = document.getElementById('navcontact')
 
-homebtn.onclick = homebtn.className = "navbarbtn currpg"
-expbtn.onclick = expbtn.className = "navbarbtn currpg"
-edubtn.onclick = edubtn.className = "navbarbtn currpg"
-contactbtn.onclick = contactbtn.className = "navbarbtn currpg"
+homebtn.onclick = function() {
+    homebtn.className = "navbarbtn currpg"
+    expbtn.className = "navbarbtn otherpg"
+    edubtn.className = "navbarbtn otherpg"
+    contactbtn.className = "navbarbtn otherpg"
+}
+
+expbtn.onclick = function() {
+    homebtn.className = "navbarbtn otherpg"
+    expbtn.className = "navbarbtn currpg"
+    edubtn.className = "navbarbtn otherpg"
+    contactbtn.className = "navbarbtn otherpg"
+}
+
+edubtn.onclick = function() {
+    homebtn.className = "navbarbtn otherpg"
+    expbtn.className = "navbarbtn otherpg"
+    edubtn.className = "navbarbtn currpg"
+    contactbtn.className = "navbarbtn otherpg"
+}
+
+contactbtn.onclick = function() {
+    homebtn.className = "navbarbtn otherpg"
+    expbtn.className = "navbarbtn otherpg"
+    edubtn.className = "navbarbtn otherpg"
+    contactbtn.className = "navbarbtn currpg"
+}
 
 const button = document.getElementById('bncbtn')
 button.onclick = function() {
